@@ -32,7 +32,7 @@ public class binarySearchTree<E extends Comparable<Report>> {
 			root.right = insert(root.right, object);
 		}
 
-        //Need binary search tree sorted insert if statements
+      
 
         return root;
     }
