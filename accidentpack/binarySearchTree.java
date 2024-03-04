@@ -53,4 +53,37 @@ public class binarySearchTree<E extends Comparable<Report>> {
     	System.out.println(nd.data.toString());
     	inOrderTree(nd.right);
     }
+	 public int getCountTime(String time) {
+        // TODO Auto-generated method stub
+        return countHelper(root, time);
+    }
+
+    private int countHelper(Node<E> node, String time) {
+        // TODO Auto-generated method stub
+        if(node == null) return 0;
+        int count = 0;
+        Report report = (Report) node.data;
+        if (report.getStart_Time().compareTo(time) >= 0) {
+            count++; // Count the current report if its start time is on or after the given time
+        }
+
+        // Recursively count reports in the left and right subtrees
+        count += countHelper(node.left, time);
+        count += countHelper(node.right, time);
+
+        return count;
+    }
+    public int getTotalCount() {
+         return getTotalHelper(root);
+    }
+
+    private int getTotalHelper(Node<E> node) {
+        // TODO Auto-generated method stub
+        if(node == null)return 0;
+        int count = 0;
+        count++;
+        count += getTotalHelper(node.left);
+        count += getTotalHelper(node.right);
+        return count;
+    }
 }
