@@ -4,7 +4,14 @@ import java.util.Scanner;
 public class program5 {
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		binarySearchTree<Report> test = Scan("accidentpack/accidents_small_sample.csv", "CA");
+		
+		Scanner scn = new Scanner(System.in);
+		System.out.println("Please enter the state to search by: ");
+		String state = scn.next(); //format: CA
+		System.out.println("Please enter the time to search by: ");
+		String time = scn.next(); //format: YYYY-MM-DD
+		binarySearchTree<Report> test = Scan("accidentpack/accidents_small_sample.csv", state);
+		//Need something to calculate number of reports on and after the time given by the user.
 		test.printTreeInOrder();
 	}
 	
