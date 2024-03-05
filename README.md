@@ -4,7 +4,10 @@ Assignment #5 for COS 285:0001-Data Structures
 Names: Hunter Palli, Ian Tasker
 
 Method creators:
+
 binarySearchTree add/insert compare findChildren print, Scan -- Hunter P
+
+
 binarySearchTree getTotalCount/Helper countHelper/getCountTime -- Ian T
 
 TO RUN
